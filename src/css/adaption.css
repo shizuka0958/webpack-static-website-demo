@@ -1,0 +1,193 @@
+/*
+    Wendong, notes for browser size for mobile
+    iPhone 6/7/8 Plus: (414 x 628, 414 x 696* / 414 x 716**)
+    iPhone 6/7/8     : 375 x 559, 375 x 627* / 375 x 647**)
+    iPhone X         : 375 x 633
+    Android:           about 360x...
+*/
+
+@media only screen and (max-width: 1600px) {
+	.marketBox {
+		background-size: cover;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.techologiesBottom .picBoxBg {
+		width: 100%;
+	}
+	footer {
+		height: auto;
+	}
+	footer .footerContent {
+		height: auto;
+		width: 100%;
+	}
+	.footerContent .footerLeft {
+		float: none;
+		width: 100%;
+	}
+	.footerContent .footerRight {
+		float: none;
+		padding-bottom: 30px;
+		width: 100%;
+		text-align: center;
+	}
+	.footerLeft .logoBox {
+		background-position: center;
+	}
+	.footerRight .footerTitle {
+		text-indent: 0;
+	}
+	.footerRight .p1 {
+		text-indent: 0;
+	}
+	.footerRight .p2 {
+		text-indent: 0;
+	}
+	.footerRight .p3 {
+		text-indent: 0;
+	}
+	.navigation {
+		width: 86%;
+	}
+}
+
+@media screen and (min-width: 570px) and (max-width: 1200px) {
+	.marketPicBox .m_pic_box {
+		height: 200px;
+	}
+	.marketPicBox .m_text {
+		font-size: 25px;
+	}
+	.m_pic_box img {
+		width: 140px;
+		height: 140px;
+	}
+	.top_94 {
+		margin-top: 150px;
+	}
+}
+
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+	.aboutMeBox .aboutContent {
+		width: 100%;
+		background: none;
+	}
+	.aboutMeBox .aboutArticle {
+		margin: 0 auto;
+		margin-top: 14px;
+		width: 100%;
+	}
+	.aboutArticle img {
+		width: 41%;
+	}
+	.aboutArticle .aboutArticleRight {
+		width: 52%;
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 570px) {
+	#pageHome {
+		background: url('../images/mainBgM.jpg') no-repeat center;
+		background-size: cover;
+		height: 660px;
+	}
+	.techologiesBottom .picBoxBg {
+		flex-direction: column;
+		height: auto;
+	}
+	.picBox {
+		margin-top: 70px;
+		width: 100%;
+		height: auto;
+	}
+	.techologiesTop {
+		height: 250px;
+		padding-top: 70px;
+	}
+	.picBox img {
+		margin-bottom: 20px;
+	}
+	.marketPicBox {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 60px;
+	}
+	.marketPicBox .m_pic_box {
+		margin-bottom: 50px;
+		width: 100%;
+	}
+	.top_94 {
+		margin-top: 0;
+	}
+	.marketBox {
+		padding-top: 70px;
+	}
+	.aboutMeBox {
+		padding-top: 70px;
+	}
+	.aboutMeBox img {
+		width: 90%;
+		height: 90%;
+	}
+	.aboutMeBox .aboutContent {
+		margin-top: 70px;
+	}
+	.aboutArticle .aboutArticleRight p {
+		padding: 0 4%;
+	}
+}
+@media screen and (min-width: 570px) and (max-width: 960px) {
+	.aboutArticle img {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 960px) {
+
+	.aboutMeBox .aboutContent {
+		width: 100%;
+		height: auto;
+		background: none;
+	}
+	.aboutMeBox .aboutArticle {
+		margin: 0 auto;
+		margin-top: 14px;
+		width: 100%;
+		height: auto;
+		box-shadow: none;
+	}
+	.aboutArticle img {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		border-top-right-radius: 30px;
+		border-bottom-right-radius: 30px;
+	}
+	.aboutArticle .aboutArticleRight {
+		margin-top: 40px;
+		padding: 0;
+		width: 100%;
+		float: none;
+	}
+	.aboutArticle .aboutArticleRight p {
+		text-align: center;
+	}
+	.tipBox {
+		display: none;
+	}
+	.navigation ul {
+		display: none;
+	}
+	.mobileIcon {
+		display: flex;
+	}
+	.navigation {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

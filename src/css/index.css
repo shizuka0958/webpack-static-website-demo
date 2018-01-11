@@ -1,4 +1,446 @@
-.title{
-    color: red;
-    display: flex;
+/**
+*基本css样式
+**/
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body, button, select, textarea, input, label, option, fieldset, legend {
+	color: #444;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-family: sans-serif,Arial,Helvetica;
+}
+input,p.select {
+     -webkit-user-select:auto; /*webkit浏览器*/
+}
+body{
+	background:#fff;
+}
+textarea {
+	resize: none;
+}
+a, img {
+	border: 0;
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none !important;
+	color: #666;
+}
+a img, :link img, :visited img {
+	border: 0px;
+}
+li {
+	list-style-type: none;
+}
+.clearfix {
+	*zoom: 1
+}
+.clearfix:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: '.';
+	font-size: 0
+}
+
+/**
+*页面使用的css样式
+**/
+.allBox {
+	width: 100%;
+}
+
+/**
+*页面头部使用的css样式
+**/
+#pageHome {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: url('../images/mainBg.jpg') no-repeat center;
+	background-size: cover;
+	/* Top and bottom are 0px, left and right are auto */
+	margin: 0px auto;
+	height: 1062px;
+}
+.pageHomeBox {
+	position: fixed;
+	top: 0;
+	padding-top: 20px;
+	width: 100%;
+	height: 62px;
+}
+#pageHome > .pageHomeText {
+	font-size: 80px;
+	color: #fff;
+	font-weight: 500px;
+	text-align: center;
+}
+
+.navigation {
+	margin: 0 auto;
+	width: 67%;
+	height: 38px;
+}
+.navigation > img {
+	display: inline-block;
+	width: 250px;
+	height: 36px;
+	float: left;
+}
+.navigation .firstUl li {
+	float: right;
+	margin-left: 36px;
+}
+.navigation .firstUl li span {
+	display: block;
+	padding-bottom: 20px;
+	height: 38px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: 600;
+	line-height: 38px;
+	cursor: pointer;
+}
+.navigation .firstUl li span:hover {
+	color: #f8600c;
+	/*border-bottom: 2px solid #f8600c;*/
+}
+.navigation .firstUl .aactive {
+	color: #f8600c;
+	/*border-bottom: 2px solid #f8600c;*/
+}
+
+.slideUl {
+	display: none;
+	position: absolute;
+	top: 84px;
+	padding: 12px 0;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+}
+.slideUl li {
+	width: 100%;
+	height: 36px;
+	font-size: 14px;
+	color: #000;
+	line-height: 36px;
+	text-align: left;
+	margin-left: 5%;
+	background: #fff;
+}
+.slideUl li span:hover {
+	color: #f47932;
+	cursor: pointer;	
+}
+
+/**
+*页面内容使用的css样式
+**/
+.technologies {
+	background: #fff;
+}
+.techologiesTop {
+	padding-top: 140px;
+	height: 356px;
+}
+.techologiesTop span {
+	display: block;
+}
+
+.techologiesTop .tip {
+	font-size: 20px;
+	color: #999;
+	text-align: center;
+}
+.techologiesTop .tipBottom {
+	margin-top: 12px;
+}
+.techologiesBottom {
+	margin-bottom: 154px;
+}
+.techologiesBottom .picBoxBg {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	margin: 0 auto;
+	width: 86%;
+	height: 220px;
+}
+.picBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30%;
+	height: 220px;
+}
+.picBox img {
+	margin: 0 auto;
+	width: 130px;
+	height: 130px;
+}
+.picBox .img1 {
+	width: 150px;
+	height: 115px;
+}
+.picBox .text {
+	display: block;
+	font-size: 24px;
+	color: #333;
+	font-weight: 400;
+	text-align: center;
+}
+
+.marketBox {
+	padding-top: 116px;
+	background: url('../images/marketBg.png') no-repeat center;
+	background-size: 100% 100%;
+}
+.marketBox .market_title {
+	color: #fff;
+	font-size: 48px;
+	font-weight: 500;
+	text-align: center;
+}
+.marketBox .whiteLine {
+	margin: 0 auto;
+	margin-top: 26px;
+	width: 150px;
+	height: 6px;
+	background: #fff;
+}
+.marketPicBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-top: 90px;
+	padding-bottom: 120px;
+	width: 86%;
+	overflow: hidden;
+}
+.marketPicBox .m_pic_box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30%;
+	height: 286px;
+}
+.m_pic_box img {
+	margin: 0 auto;
+	width: 220px;
+	height: 220px;
+}
+.marketPicBox .m_text {
+	font-size: 36px;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+}
+
+.aboutMeBox {
+	padding-top: 134px;
+}
+.aboutMeBox .aboutContent {
+	margin: 0 auto;
+	margin-top: 96px;
+	width: 1221px;
+	height: 724px;
+	background: url('../images/colorSquare.png') no-repeat left top;
+	background-size: 900px 600px;
+	overflow: hidden;
+}
+.aboutMeBox .aboutArticle {
+	width: 1079px;
+	height: 480px;
+	margin: 60px 0 0 116px;
+	border-radius: 30px;
+	box-shadow:7px 7px 14px #cecece, 7px -7px 14px #cecece;
+	background: #fff;
+}
+.aboutArticle img {
+	float: left;
+	width: 430px;
+	height: 480px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	background: url('../images/aboutBg.png') no-repeat center;
+}
+.aboutArticle .aboutArticleRight {
+	float: left;
+	padding: 82px 54px 0 24px;
+	width: 571px;
+	height: 398px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+.aboutArticle .aboutArticleRight p {
+	margin-bottom: 48px;
+	font-size: 20px;
+	color: #000;
+}
+
+/**
+*页面底部
+**/
+footer {
+	height: 472px;
+	background: #011136;
+}
+footer .footerContent {
+	margin: 0 auto;
+	width: 1220px;
+	height: 472px;
+}
+.footerContent .footerLeft {
+	float: left;
+	width: 50%;
+}
+.footerLeft .logoBox {
+	height: 76px;
+	/*background: url('../images/logo.png') no-repeat 250px 136px;*/
+}
+.footerLeft .qrCode {
+	display: block;
+	margin: 0 auto;
+	width: 130px;
+	height: 130px;
+	background: #fff;
+}
+.footerLeft .footerText {
+	display: block;
+	margin-top: 78px;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+}
+.footerContent .footerRight {
+	float: left;
+	width: 50%;
+}
+.footerRight .footerTitle {
+	display: block;
+	margin-top: 78px;
+	font-size: 34px;
+	color: #fff;
+	font-weight: 500;
+	text-indent: 186px;
+}
+.footerRight .msgBox {
+	margin-top: 53px;
+}
+.footerRight p {
+	margin-bottom: 28px;
+	font-size: 18px;
+	color: #fefefe;
+}
+.footerRight .p1 {
+	text-indent: 60px;
+}
+.footerRight .p2 {
+	text-indent: 126px;
+}
+.footerRight .p3 {
+	text-indent: 210px;
+}
+.tipBox {
+	position: fixed;
+	top: 50%;
+	right: 30px;
+	margin-top: -75px;
+	width: 30px;
+}
+.tipBox li {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+}
+.tipBox li span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: #ccc;
+}
+.tipBox li span:hover {
+	width: 14px;
+	height: 14px;
+	background: #999;
+}
+.tipBox li .spanactive {
+	width: 14px;
+	height: 14px;
+	background: #999;
+}
+.mobileIcon {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	width: 38px;
+	height: 38px;
+}
+.mobileIcon .lineBox {
+	cursor: pointer;
+}
+.mobileIcon .lineMobile {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #fff;
+}
+.mobileIcon .iconClose {
+	display: none;
+	width: 38px;
+	height: 38px;
+	cursor: pointer;
+	background: url('../images/close.png') no-repeat center;
+	background-size: 20px 20px;
+
+}
+.mobileIcon .lineCenter {
+	margin: 6px 0;
+}
+
+
+
+/**
+*共用
+**/
+.title {
+	display: block;
+	font-size: 48px;
+	color: #000;
+	text-align: center;
+}
+.colorLine {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 150px;
+	height: 5px;
+	background: url('../images/color_line.png') no-repeat center;
+}
+.top_94 {
+	margin-top: 94px;
+}
+.top_32 {
+	margin-top: 32px;
 }

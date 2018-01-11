@@ -44,6 +44,13 @@ module.exports = {
                     }]
                 })
             },
+            {
+                test: /\.(png|jpg)$/,
+                loader: require.resolve('url-loader'),
+                options: {
+                    name: 'images/[name].[hash:8].[ext]',
+                },
+            }
         ]
     },
     plugins: [
@@ -57,7 +64,7 @@ module.exports = {
         //new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
-        contentBase:[path.resolve(__dirname, "dist")],
+        contentBase: [path.resolve(__dirname, "dist")],
         inline: true,
     },
     watch: false
