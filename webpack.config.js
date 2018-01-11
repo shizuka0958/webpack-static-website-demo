@@ -1,5 +1,7 @@
 const path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -49,7 +51,15 @@ module.exports = {
         new ExtractTextPlugin({
             filename: 'css/main.css'
         }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "public/index.html")//new 一个这个插件的实例，并传入相关的参数
+        }),
+        //new webpack.HotModuleReplacementPlugin(),
     ],
+    devServer: {
+        contentBase:[path.resolve(__dirname, "dist")],
+        inline: true,
+    },
     watch: false
     /* Advanced configuration (click to show) */
 }

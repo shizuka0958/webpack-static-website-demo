@@ -4,7 +4,9 @@
   "description": "use webpack dev static website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --content-base dist --inline"
   },
   "repository": {
     "type": "git",
@@ -25,12 +27,14 @@
     "css-loader": "^0.28.8",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
     "jquery": "^3.2.1",
     "postcss-loader": "^2.0.10",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2"
   },
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
   }
 }
