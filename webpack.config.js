@@ -20,6 +20,7 @@ module.exports = {
         // the filename template for entry chunks
 
         /* Advanced output configuration (click to show) */
+       
     },
     module: {
         rules: [
@@ -45,12 +46,25 @@ module.exports = {
                 })
             },
             {
+                test: /\.html$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        // ignoreCustomFragments: [],
+                        // root: path.resolve(__dirname, 'src'),
+                        // attrs: ['img:src']
+                    }
+                }
+            },
+            {
                 test: /\.(png|jpg)$/,
                 loader: require.resolve('url-loader'),
                 options: {
-                    name: 'images/[name].[hash:8].[ext]',
+                    limit:10,
+                    name: 'images/[name].[ext]',
                 },
-            }
+            },
+           
         ]
     },
     plugins: [
