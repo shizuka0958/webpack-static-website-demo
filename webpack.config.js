@@ -22,8 +22,8 @@ module.exports = {
         /* Advanced output configuration (click to show) */
 
         /*please modify here with your absolute path*/
-        publicPath:'/Users/zm/work/projects/github/webpack-static-website-demo/dist/',
-       
+       // publicPath:'/Users/zm/work/projects/github/webpack-static-website-demo/dist/',
+  
     },
     module: {
         rules: [
@@ -64,7 +64,7 @@ module.exports = {
                 loader: require.resolve('url-loader'),
                 options: {
                     limit:10,
-                    name: 'images/[name].[ext]',
+                    name: '[name].[ext]',
                 },
             },
            
@@ -73,7 +73,7 @@ module.exports = {
     plugins: [
         // 生成独立css文件
         new ExtractTextPlugin({
-            filename: 'css/main.css'
+            filename: 'main.css'
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "public/index.html")//new 一个这个插件的实例，并传入相关的参数
