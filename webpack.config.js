@@ -8,7 +8,7 @@ module.exports = {
     entry: "./src/index.js", // string | object | array
     // Here the application starts executing
     // and webpack starts bundling
-
+    
     output: {
         // options related to how webpack emits results
 
@@ -20,6 +20,9 @@ module.exports = {
         // the filename template for entry chunks
 
         /* Advanced output configuration (click to show) */
+
+        /*please modify here with your absolute path*/
+        publicPath:'/Users/zm/work/projects/github/webpack-static-website-demo/dist/',
        
     },
     module: {
